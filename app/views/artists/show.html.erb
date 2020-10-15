@@ -1,0 +1,24 @@
+
+<h3><% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %><h3>
+
+<h2>Artist Page</h2>
+
+<strong>Name:</strong>
+<%= @artist.name %><br><br>
+
+<strong>Age:</strong>
+<%= @artist.age %><br><br>
+
+<strong>Title:</strong>
+<%= @artist.title %><br><br><br>
+
+<strong>Instruments</strong>
+<ul>
+  <% @artist.instruments.uniq.each do |i| %>
+    <li><%= i.name %></li>
+  <% end %>
+</ul>

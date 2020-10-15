@@ -1,0 +1,12 @@
+<h2>Create Artist Instrument Association</h2>
+
+<%= form_for @artist_instrument do |f| %>
+  Artist:
+  <%= f.collection_select :artist_id, Artist.all, :id, :name %><br><br>
+
+  Instrument:
+  <%= f.collection_select :instrument_id, Instrument.all, :id, :name %><br><br>
+
+  <%= f.submit "Create Artist Instrument Association" %>
+
+<% end %>
